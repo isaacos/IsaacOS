@@ -67,3 +67,67 @@ body {
   width: 100%;
   display: flex;
 }
+
+#projects {
+  margin-top: 5vmin;
+}
+
+.project-inner-div {
+  background-color: rgb(8, 13,56);
+  color: white;
+  padding: 10vmin;
+  height: 40vmin;
+  font-family: 'Limelight';
+}
+
+.project-inner-div > div {
+  display: inline-block;
+}
+
+.project-inner-div > iframe {
+  display: inline-block;
+  float: right;
+  background-color: white;
+  border: solid;
+  border-color: rgb(65, 126, 123);
+  border-width: thick;
+}
+
+@media (max-width: 1200px) {
+  .project-inner-div {
+    height: 90vmin;
+    align-items: center;
+  }
+  .project-inner-div > div {
+    vertical-align: top;
+    display: grid;
+  }
+  .project-inner-div > iframe {
+    display: grid;
+    position: absolute;
+    float: right;
+  }
+}
+
+@media (max-width: 680px) {
+  .project-inner-div {
+    margin-right: 3vw;
+  }
+  .project-inner-div > iframe {
+    padding-left: 50px;
+    float:left;
+    display: grid;
+    width: 320px;
+    height: 197px;
+  }
+}
+
+@media (max-height: 1000px) {
+  .project-inner-div > iframe {
+    padding-left: 50px;
+    float:right;
+    display: grid;
+    width: 300px;
+    height: 177px;
+  }
+}
