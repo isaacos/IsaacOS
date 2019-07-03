@@ -8,14 +8,6 @@ body {
   background-color: rgb(160, 66, 32);
 }
 
-#nav-bar {
-  height: 100%;
-  min-height: 100%;
-  width: 10%;
-  text-align: center;
-  box-shadow: 0 0.4em 0.4em 0 #000000;
-  background-color: rgb(65, 126, 123);
-}
 
 #photo {
   height: 45vh;
@@ -31,10 +23,11 @@ body {
   border: solid;
   background-color: white;
   text-align: center;
-  height: 10vmax;
+  display: inline-block;
+  height: 13vmax;
   color: rgb(8, 13,56);
   overflow: overlay;
-  padding: 1vmax;
+  padding: 2vmax 1vmax 1vmax 1vmax;
   transform: skewY(-2deg);
   font-family: 'Limelight';
 }
@@ -73,7 +66,7 @@ body {
 }
 
 .project-inner-div {
-  background-color: rgb(8, 13,56);
+  background-color: rgb(65, 126, 123);
   color: white;
   padding: 10vmin;
   height: 40vmin;
@@ -106,6 +99,36 @@ body {
     display: grid;
     position: absolute;
     float: right;
+  }
+}
+
+@media (max-width: 1000px),  (max-height: 400px) {
+  #header {
+    display:inline-grid;
+  }
+  .title {
+    transform: none;
+    text-align: center;
+  }
+  #sub-title {
+    margin: 0;
+  }
+  #name{
+    margin: 0;
+  }
+  #title-div {
+    width: 100%;
+    transform: none;
+  }
+  #description {
+    transform: none;
+    height: calc(90vh - 40vw);
+  }
+}
+
+@media (orientation: portrait) {
+  #description {
+    height: calc(90vh - 55vw);
   }
 }
 
