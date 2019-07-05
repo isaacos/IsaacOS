@@ -65,17 +65,40 @@ body {
   margin-top: 5vmin;
 }
 
+.iframe-container {
+  height: 150vmin;
+  margin-bottom: -10vmin;
+  margin-top: -10vmin;
+  margin-right: -74vmin;
+}
+
+#iframe {
+  background-color: rgb(65, 126, 123);
+  height: 40%;
+  width: 40%;
+}
+
 .project-inner-div {
   background-color: rgb(65, 126, 123);
   color: white;
   padding: 10vmin;
+  margin: 1em;
   height: 40vmin;
+  overflow: hidden;
   font-family: 'Limelight';
 }
 
-.project-inner-div > div {
+.project-inner-div > iframe {
+  background-color: black;
+}
+
+.project-description {
+  width: 50%;
+  float: left;
   display: inline-block;
 }
+
+
 
 .project-inner-div > iframe {
   display: inline-block;
@@ -91,7 +114,7 @@ body {
     height: 90vmin;
     align-items: center;
   }
-  .project-inner-div > div {
+  .project-description {
     vertical-align: top;
     display: grid;
   }
@@ -122,13 +145,25 @@ body {
   }
   #description {
     transform: none;
-    height: calc(90vh - 40vw);
   }
 }
 
 @media (orientation: portrait) {
   #description {
-    height: calc(90vh - 55vw);
+   height: calc(70vh - 25vw);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 700px) {
+  #description {
+    height: calc(90vw - 60vh);
+    padding: 0px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  #description {
+    height: calc(30em - 30vw);
   }
 }
 
