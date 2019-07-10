@@ -8,6 +8,20 @@ body {
   background-color: rgb(160, 66, 32);
 }
 
+h5 > a {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  background-color: rgb(8, 13,56);
+  padding: 4px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(160, 66, 32);
+  color: rgb(8, 13,56);
+}
+
 
 #photo {
   height: 45vh;
@@ -74,8 +88,9 @@ body {
 
 #iframe {
   background-color: rgb(65, 126, 123);
-  height: 40%;
+  height: 46%;
   width: 40%;
+  margin-left: 5px;
 }
 
 .project-inner-div {
@@ -83,9 +98,15 @@ body {
   color: white;
   padding: 10vmin;
   margin: 1em;
-  height: 40vmin;
+  height: 46vmin;
   overflow: hidden;
   font-family: 'Limelight';
+}
+
+.links {
+  display: flex;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .project-inner-div > iframe {
@@ -148,11 +169,6 @@ body {
   }
 }
 
-@media (orientation: portrait) {
-  #description {
-   height: calc(70vh - 25vw);
-  }
-}
 
 @media (orientation: landscape) and (max-width: 700px) {
   #description {
@@ -180,12 +196,38 @@ body {
   }
 }
 
-@media (max-height: 1000px) {
-  .project-inner-div > iframe {
-    padding-left: 50px;
-    float:right;
+@media (max-width: 75em), (max-height: 35em) {
+  .project-inner-div {
     display: grid;
-    width: 300px;
-    height: 177px;
+    height: auto;
+  }
+  .project-inner-div < h2 {
+    text-align: center;
+  }
+  .project-description {
+    margin-top: 10px;
+    width: auto;
+  }
+  .iframe-container {
+    margin-top: auto;
+    margin-bottom: -461px;
+    width: 150%;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  .iframe-container < iframe {
+    margin-right: 25%;
+  }
+}
+
+@media (orientation: portrait) {
+  #description {
+    height: calc(70vh - 25vw);
+  }
+  .iframe-container {
+    width: 320%;
+    float: left;
+    margin-right: 0px;
+    margin-left: -55px;
   }
 }
