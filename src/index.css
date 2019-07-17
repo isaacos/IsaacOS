@@ -119,7 +119,34 @@ a:hover {
   display: inline-block;
 }
 
+.recommendation-div {
+  background-color: white;
+  font-family: 'Limelight';
+  padding: 3em;
+  border-radius: 10px;
+  border: solid;
+}
 
+.recommendation-div > ul {
+  column-count: 3;
+}
+
+#recommendation-input {
+  border-radius: 5px;
+  border: solid;
+}
+
+button {
+  font-family: 'Limelight';
+  border: solid;
+  border-radius: 5px;
+  outline: none;
+}
+
+button:active {
+  color: white;
+  background-color: black;
+}
 
 .project-inner-div > iframe {
   display: inline-block;
