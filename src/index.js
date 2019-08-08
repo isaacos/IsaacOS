@@ -17,7 +17,12 @@ titleDiv.id = 'title-div'
 titleDiv.innerHTML += `
   <h1 class="title" id="name">Isaac Oseas</h1>
   <h3 class="title" id="sub-title">Full Stack Developer</h3>
-  <h3 class="title" id="sub-title">Very normal person</h3>`
+  <h3 class="title" id="sub-title">Very normal person</h3>
+  <h3 class="title other" id="sub-title">
+    <a href="https://www.linkedin.com/in/isaac-oseas-b8b0b0a4/">LinkedIn</a>
+    <a href="https://github.com/isaacos">Github</a>
+    <a href="mailto:oseasisaac91@gmail.com">Email</a>
+  </h3>`
 header.insertBefore(titleDiv, header.firstChild)
 
 description.innerHTML += `
@@ -60,46 +65,46 @@ function projectCardGenerator() {
 projectCardGenerator()
 
 header.appendChild(projects)
-header.innerHTML += `
-  <div class="recommendation-div">
-    <form id="recommendation-form">
-      <input type="text" id="recommendation-input" value="">
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="recommendation-list"></ul>
-  </div>`
+// header.innerHTML += `
+//   <div class="recommendation-div">
+//     <form id="recommendation-form">
+//       <input type="text" id="recommendation-input" value="">
+//       <button type="submit">Submit</button>
+//     </form>
+//     <ul id="recommendation-list"></ul>
+//   </div>`
 
-const recommendationForm = document.getElementById('recommendation-form')
-const recommendationList = document.getElementById('recommendation-list')
-
-function loadRecommendations(recommendations){
-  recommendations.data.forEach(recommendation => {
-    addRecommendation(recommendation)
-  })
-}
-
-function addRecommendation(recommendation){
-  recommendationList.innerHTML += `<li>${recommendation.text}</li>`
-}
-
-window.addEventListener('load', () => {
-  fetch('http://localhost:4000/api/recommendations')
-  .then(response => response.json())
-  .then(recommendations => loadRecommendations(recommendations))
-})
-
-recommendationForm.addEventListener('submit', () => {
-  event.preventDefault()
-  fetch('http://localhost:4000/api/recommendations', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify({
-      text: document.getElementById("recommendation-input").value
-    })
-  })
-  .then(response => response.json())
-  .then(recommendation => addRecommendation(recommendation))
-})
+// const recommendationForm = document.getElementById('recommendation-form')
+// const recommendationList = document.getElementById('recommendation-list')
+//
+// function loadRecommendations(recommendations){
+//   recommendations.data.forEach(recommendation => {
+//     addRecommendation(recommendation)
+//   })
+// }
+//
+// function addRecommendation(recommendation){
+//   recommendationList.innerHTML += `<li>${recommendation.text}</li>`
+// }
+//
+// window.addEventListener('load', () => {
+//   fetch('http://localhost:4000/api/recommendations')
+//   .then(response => response.json())
+//   .then(recommendations => loadRecommendations(recommendations))
+// })
+//
+// recommendationForm.addEventListener('submit', () => {
+//   event.preventDefault()
+//   fetch('http://localhost:4000/api/recommendations', {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       "Accept": "application/json"
+//     },
+//     body: JSON.stringify({
+//       text: document.getElementById("recommendation-input").value
+//     })
+//   })
+//   .then(response => response.json())
+//   .then(recommendation => addRecommendation(recommendation))
+// })

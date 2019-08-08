@@ -22,6 +22,19 @@ a:hover {
   color: rgb(8, 13,56);
 }
 
+#sub-title > a {
+  color: blue;
+}
+
+#sub-title > a:hover {
+  background-color: white;
+}
+
+.title.other {
+  background-color: white;
+  border: solid rgb(8,13,56);
+}
+
 
 #photo {
   height: 45vh;
@@ -31,6 +44,8 @@ a:hover {
   border-style: solid;
   transform: skewY(-2deg);
 }
+
+
 
 #description {
   border-color: rgb(8, 13,56);
@@ -237,10 +252,10 @@ button:active {
   }
   .iframe-container {
     margin-top: auto;
-    margin-bottom: -461px;
-    width: 150%;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-bottom: -580px;
+    width: 326%;
+    margin-right: -20%;
+    margin-left: -20%;
   }
   .iframe-container < iframe {
     margin-right: 25%;
@@ -256,5 +271,24 @@ button:active {
     float: left;
     margin-right: 0px;
     margin-left: -55px;
+  }
+}
+
+@media (max-height: 500px){
+  .project-inner-div {
+    height: 760px;
+  }
+  .iframe-container {
+    margin-top: -103vh;
+  }
+}
+
+@media (max-height: 500px) and (min-width: 770px){
+  .project-inner-div {
+    height: 690px;
+  }
+  .iframe-container {
+    margin-top: 5vh;
+    height: 300vmin;
   }
 }
