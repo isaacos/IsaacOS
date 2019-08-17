@@ -5,7 +5,7 @@ body {
   width: 100%;
   margin: 0;
   position: absolute;
-  background-color: rgb(160, 66, 32);
+  background-color: #1a1a1a;
 }
 
 h5 > a {
@@ -18,21 +18,25 @@ h5 > a {
 }
 
 a:hover {
-  background-color: rgb(160, 66, 32);
+  background-color: #1a1a1a;
   color: rgb(8, 13,56);
 }
 
 #sub-title > a {
-  color: blue;
+  color: rgb(175, 214, 159);
+  text-shadow: 1px 1px black;
+  transition: color 1s, font-size 1s;
 }
 
 #sub-title > a:hover {
   background-color: white;
+  color: rgb(231, 79, 93);
+  font-size: 1.5em;
 }
 
 .title.other {
   background-color: white;
-  border: solid rgb(8,13,56);
+  border: solid #E8BC66;
 }
 
 
@@ -68,8 +72,9 @@ a:hover {
 }
 
 .title {
-  background: rgb(8, 13,56);
-  color: white;
+  background: #ffffff;
+  border: solid #E8BC66;
+  text-shadow: 2px 0px #E8BC66;
   transform: skewY(-2deg);
   font-family: 'Limelight';
 }
@@ -102,14 +107,14 @@ a:hover {
 }
 
 #iframe {
-  background-color: rgb(65, 126, 123);
+  background-color: #1a1a1a;
   height: 46%;
   width: 40%;
   margin-left: 5px;
 }
 
 .project-inner-div {
-  background-color: rgb(65, 126, 123);
+  background-color: #1a1a1a;
   color: white;
   padding: 10vmin;
   margin: 1em;
@@ -209,6 +214,9 @@ button:active {
   #description {
     transform: none;
   }
+  #photo {
+    transform: none;
+  }
 }
 
 
@@ -288,7 +296,7 @@ button:active {
     height: 690px;
   }
   .iframe-container {
-    margin-top: 5vh;
+    margin-top: -36vh;
     height: 300vmin;
   }
 }
