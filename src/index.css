@@ -44,16 +44,15 @@ a:hover {
   height: 45vh;
   width: 43vh;
   margin: 10vh 0 4vh 12vh;
-  border-color: rgb(8,13,56);
-  border-style: solid;
+  border: solid #E8BC66;
   transform: skewY(-2deg);
 }
 
 
 
+
 #description {
-  border-color: rgb(8, 13,56);
-  border: solid;
+  border: solid #E8BC66;
   background-color: white;
   text-align: center;
   display: inline-block;
@@ -95,9 +94,33 @@ a:hover {
   display: flex;
 }
 
-#projects {
+#projects-top-border {
+  float: right;
   margin-top: 5vmin;
+  height: 10px;
+  background-color: rgb(175, 214, 159);
+  width: 0;
+  margin-left: 35px;
+  transition: all 1s;
 }
+
+#projects-and-left {
+  display: inline-flex;
+}
+
+#projects-left-border {
+  width: 15px;
+  height: 0;
+  margin-left: 35px;
+  background-color: rgb(175, 214, 159);
+  transition-delay: 10s;
+  transition: all 1s;
+}
+
+#projects {
+  margin-top: 7vmin;
+}
+
 
 .iframe-container {
   height: 150vmin;
@@ -136,6 +159,7 @@ a:hover {
 .project-description {
   width: 50%;
   float: left;
+  margin-top: -3em;
   display: inline-block;
 }
 
@@ -183,6 +207,7 @@ button:active {
     align-items: center;
   }
   .project-description {
+    margin-top: auto;
     vertical-align: top;
     display: grid;
   }
@@ -261,9 +286,9 @@ button:active {
   .iframe-container {
     margin-top: auto;
     margin-bottom: -580px;
-    width: 326%;
+    width: 250%;
     margin-right: -20%;
-    margin-left: -20%;
+    margin-left: 1%;
   }
   .iframe-container < iframe {
     margin-right: 25%;
@@ -287,7 +312,7 @@ button:active {
     height: 760px;
   }
   .iframe-container {
-    margin-top: -103vh;
+    margin-top: -52vh;
   }
 }
 
@@ -296,7 +321,7 @@ button:active {
     height: 690px;
   }
   .iframe-container {
-    margin-top: -36vh;
+    margin-top: -1vh;
     height: 300vmin;
   }
 }
