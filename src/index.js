@@ -65,8 +65,12 @@ header.insertBefore(titleDiv, header.firstChild)
 description.innerHTML += `
     <p>My first experience with tech was in graduate school when I learned about Linux in order to install it on a cheap laptop. This sparked my interest to learn more about technology as a means to help people. Since then I graduated from the Flatiron School becoming a fullstack developer with experience working with JavaScript, Ruby on Rails, React/Redux, HTML5, CSS. My coding philosophy is that functionality and style should be interconnected, and that the best code is written by people who are always learning.</p>`
 
+
 const projects = document.createElement('DIV')
 projects.id = 'projects'
+
+const projectsTopBorder = document.createElement('DIV')
+projectsTopBorder.id = 'projects-top-border'
 
 function liProject(liPoints = []){
   allListItems = ''
@@ -100,48 +104,24 @@ function projectCardGenerator() {
   })
 }
 projectCardGenerator()
+header.appendChild(projectsTopBorder)
+projectsAndLeft =  document.createElement('DIV')
+projectsAndLeft.id = 'projects-and-left'
+projectsLeftBorder = document.createElement('DIV')
+projectsLeftBorder.id = 'projects-left-border'
+header.appendChild(projectsAndLeft)
+projectsAndLeft.appendChild(projectsLeftBorder)
+projectsAndLeft.appendChild(projects)
 
-header.appendChild(projects)
-// header.innerHTML += `
-//   <div class="recommendation-div">
-//     <form id="recommendation-form">
-//       <input type="text" id="recommendation-input" value="">
-//       <button type="submit">Submit</button>
-//     </form>
-//     <ul id="recommendation-list"></ul>
-//   </div>`
+window.addEventListener('scroll', function(e){
+  const y = window.scrollY;
 
-// const recommendationForm = document.getElementById('recommendation-form')
-// const recommendationList = document.getElementById('recommendation-list')
-//
-// function loadRecommendations(recommendations){
-//   recommendations.data.forEach(recommendation => {
-//     addRecommendation(recommendation)
-//   })
-// }
-//
-// function addRecommendation(recommendation){
-//   recommendationList.innerHTML += `<li>${recommendation.text}</li>`
-// }
-//
-// window.addEventListener('load', () => {
-//   fetch('http://localhost:4000/api/recommendations')
-//   .then(response => response.json())
-//   .then(recommendations => loadRecommendations(recommendations))
-// })
-//
-// recommendationForm.addEventListener('submit', () => {
-//   event.preventDefault()
-//   fetch('http://localhost:4000/api/recommendations', {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Accept": "application/json"
-//     },
-//     body: JSON.stringify({
-//       text: document.getElementById("recommendation-input").value
-//     })
-//   })
-//   .then(response => response.json())
-//   .then(recommendation => addRecommendation(recommendation))
-// })
+  console.log(projects.offsetHeight)
+  if(y > 200){
+      projectsTopBorder.style.width = "calc(100% - 35px)"
+      setTimeout(() => {
+        projectsLeftBorder.style.height = projects.offsetHeight + "px"
+      }, 1000)
+
+  }
+})
