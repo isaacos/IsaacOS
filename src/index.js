@@ -116,13 +116,10 @@ projectsAndLeft.appendChild(projects)
 
 window.addEventListener('scroll', function(e){
   const y = window.scrollY;
-
-  console.log(projects.offsetHeight)
   if(y > 200){
-      projectsTopBorder.style.width = "calc(100% - 35px)"
-      setTimeout(() => {
-        projectsLeftBorder.style.height = projects.offsetHeight + "px"
-      }, 1000)
-
+    projectsTopBorder.style.width = "calc(100% - 35px)"
+    setTimeout(() => {
+      projectsLeftBorder.style.height = projects.offsetHeight + "px"
+    }, 1000)
   }
 })
