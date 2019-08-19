@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 body {
   height: 100%;
@@ -12,20 +13,24 @@ h5 > a {
   margin-left: 5px;
   margin-right: 5px;
   color: white;
-  background-color: rgb(8, 13,56);
+  background: linear-gradient(to right, rgb(175, 214, 159) 50%, rgb(231, 79, 93) 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   padding: 4px;
   text-decoration: none;
+  transition: all 1s;
 }
 
 a:hover {
-  background-color: #1a1a1a;
-  color: rgb(8, 13,56);
+  background-position: left bottom;
+  color: #1a1a1a;
 }
 
 #sub-title > a {
   color: rgb(175, 214, 159);
   text-shadow: 1px 1px black;
   transition: color 1s, font-size 1s;
+  font-family: 'Montserrat';
 }
 
 #sub-title > a:hover {
@@ -61,7 +66,7 @@ a:hover {
   overflow: overlay;
   padding: 2vmax 1vmax 1vmax 1vmax;
   transform: skewY(-2deg);
-  font-family: 'Limelight';
+  font-family: 'Montserrat';
 }
 
 #title-div {
@@ -143,7 +148,7 @@ a:hover {
   margin: 1em;
   height: 46vmin;
   overflow: hidden;
-  font-family: 'Limelight';
+  font-family: 'Montserrat';
 }
 
 .links {
