@@ -206,6 +206,19 @@ button:active {
   border-width: thick;
 }
 
+@media (max-device-width: 500px) {
+  .title {
+    font-size: 3em;
+  }
+  .project-description {
+    font-size: 2em;
+  }
+  #description {
+    height: 20%;
+  }
+}
+
+
 @media (max-width: 1200px) {
   .project-inner-div {
     height: 90vmin;
